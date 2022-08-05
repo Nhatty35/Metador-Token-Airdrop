@@ -3,7 +3,7 @@ import json
 import telebot
 
 ##TOKEN DETAILS
-TOKEN = "TRON"
+TOKEN = "METADOR TOKEN"
 
 BOT_TOKEN = "5477967636:AAEpcrr2jvdpSE0RMDDVnC673KkX71nvh1s"
 PAYMENT_CHANNEL = "@airdrop_payments" #add payment channel here including the '@' sign
@@ -98,7 +98,7 @@ def start(message):
         markups = telebot.types.InlineKeyboardMarkup()
         markups.add(telebot.types.InlineKeyboardButton(
             text='🤼‍♂️ Joined', callback_data='check'))
-        msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ @ Fill your channels at line: 101 and 157*"
+        msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ ["@Metador_Token","@NB_Airdrops"]
         bot.send_message(user, msg_start,
                          parse_mode="Markdown", reply_markup=markups)
    except:
@@ -154,7 +154,7 @@ def query_handler(call):
             markup = telebot.types.InlineKeyboardMarkup()
             markup.add(telebot.types.InlineKeyboardButton(
                 text='🤼‍♂️ Joined', callback_data='check'))
-            msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ @ Fill your channels at line: 101 and 157*"
+            msg_start = "*🍔 To Use This Bot You Need To Join This Channel - \n➡️ ["@Metador_Token","@NB_Airdrops"]
             bot.send_message(call.message.chat.id, msg_start,
                              parse_mode="Markdown", reply_markup=markup)
    except:
@@ -187,7 +187,7 @@ def send_text(message):
         data = json.load(open('users.json', 'r'))
         ref_msg = "*⏯️ Total Invites : {} Users\n\n👥 Refferrals System\n\n1 Level:\n🥇 Level°1 - {} {}\n\n🔗 Referral Link ⬇️\n{}*"
 
-        bot_name = bot.get_me().username
+        bot_name = bot.get_me().usernameNo
         user_id = message.chat.id
         user = str(user_id)
 
